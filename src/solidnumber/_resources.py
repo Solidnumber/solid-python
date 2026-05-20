@@ -85,7 +85,7 @@ class VoiceResource(_Resource):
         return self._client.post(
             "/api/v1/ada/cli-dispatch",
             json={
-                "verb": "voice.outbound_call",
+                "verb": "voice_outbound_call",
                 "args": {
                     "contact_id": contact_id,
                     "intent": intent,
@@ -112,7 +112,7 @@ class VoiceResource(_Resource):
         return self._client.post(
             "/api/v1/ada/cli-dispatch",
             json={
-                "verb": "sms.send",
+                "verb": "sms_send",
                 "args": {
                     "contact_id": contact_id,
                     "message": message,
