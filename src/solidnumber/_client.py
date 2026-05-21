@@ -76,11 +76,22 @@ class SolidClient:
         )
 
         # Resource namespaces. Imported lazily here to avoid circular import.
-        from ._resources import ContactsResource, HealthResource, VoiceResource
+        from ._resources import (
+            ContactsResource, HealthResource, VoiceResource,
+            KbResource, CalendarResource, GmailResource, EmailResource,
+            DealsResource, LeadsResource, AppointmentsResource,
+        )
 
         self.health = HealthResource(self)
         self.contacts = ContactsResource(self)
         self.voice = VoiceResource(self)
+        self.kb = KbResource(self)
+        self.calendar = CalendarResource(self)
+        self.gmail = GmailResource(self)
+        self.email = EmailResource(self)
+        self.deals = DealsResource(self)
+        self.leads = LeadsResource(self)
+        self.appointments = AppointmentsResource(self)
 
     # ── Lifecycle ───────────────────────────────────────────────────────
 
