@@ -56,3 +56,10 @@ Thumbs.db
 
 # Distribution
 .python-version
+
+# Secrets are never committed (security sprint 2026-10-23).
+.env
+.env.*
+!.env.example
+*.key
+*.pem
